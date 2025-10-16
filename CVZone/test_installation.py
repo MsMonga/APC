@@ -1,4 +1,3 @@
-# test_installation.py
 import sys
 print(f"Python version: {sys.version}")
 print("=" * 50)
@@ -30,6 +29,13 @@ try:
     print(f"   NumPy version: {np.__version__}")
 except ImportError as e:
     print(f"❌ NumPy installation failed: {e}")
+    
+try:
+    import gpiozero as gp
+    print("✅ GPIOZero installed successfully")
+    print(f"   GPIOZero version: {gp.__version__}")
+except ImportError as e:
+    print(f"❌ GPIOZero installation failed: {e}")
 
 # Test camera access
 try:
