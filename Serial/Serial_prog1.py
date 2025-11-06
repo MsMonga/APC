@@ -4,7 +4,7 @@ import time
 ser= serial.Serial('/dev/ttyUSB0', 9600, timeout=1.0)
 time.sleep(3)
 ser.reset_input_buffer()
-print("serial ok")
+print("serial ok, Press ctrl+C in the shell to stop the serial communication")
 try:
     while True:
         time.sleep(0.01)
